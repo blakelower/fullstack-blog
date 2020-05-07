@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {Avatar} from 'antd';
 
 const navLinks = [
   {
@@ -20,10 +21,11 @@ const navLinks = [
   },
 ];
 
-export default function Navigation() {
+export default function Navigation({user}) {
   return (
     <nav className="site-navigation">
-      <span>My React Blog</span>
+      <span className="menu-title">My React Blog</span>
+      <div className="menu-content-container">
       <ul>
         {navLinks.map((link, index) => (
           <li key={index}>
@@ -31,6 +33,11 @@ export default function Navigation() {
           </li>
         ))}
       </ul>
+      <span>
+        <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" size={38}/>
+        <span className="menu-avatar-name">{`${user.firstName} ${user.lastName}`}</span>
+        </span>
+      </div>
     </nav>
   );
 }

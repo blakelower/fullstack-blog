@@ -1,7 +1,7 @@
-import React, {useState, useRef} from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import {Avatar} from 'antd';
-import {useOnClickOutside} from './hooks';
+
 
 const navLinks = [
   {

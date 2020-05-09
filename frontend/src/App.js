@@ -10,8 +10,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 function App() {
   const user = {
-    firstName: 'Blake',
-    lastName: 'Coder'
+    firstName: 'Blakie',
+    lastName: 'Codes'
   }
 
   return (
